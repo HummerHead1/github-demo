@@ -1,37 +1,12 @@
 package com.example.sprinddemoaop.dao;
 
-import org.springframework.stereotype.Component;
+import java.util.List;
 
-@Component
-public class AccountDao {
+public interface AccountDao {
 
-    private String name;
-    private String level;
+    void addAccount(Account account);
 
-    public String getName() {
-        System.out.println("Inside getName()");
-        return name;
-    }
+    List<Account> findAccounts();
 
-    public void setName(String name) {
-        System.out.println("Inside setName()");
-        this.name = name;
-    }
-
-    public String getLevel() {
-        System.out.println("Inside getLevel()");
-        return level;
-    }
-
-    public void setLevel(String level) {
-        System.out.println("Inside setLevel()");
-        this.level = level;
-    }
-
-    public void addAccount(Account account){
-        System.out.println("Adding new account " + account.getName() + " into the database.");
-    }
-    public void accountStart(){
-        System.out.println("STARTING the new account");
-    }
+    List<Account> findAllSilverAccounts();
 }
