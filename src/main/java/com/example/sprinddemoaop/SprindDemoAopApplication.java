@@ -46,7 +46,7 @@ public class SprindDemoAopApplication {
         account.findAccounts();
         System.out.println("---------------------------");
         System.out.println(account.findAllSilverAccounts());
-        System.out.println("hello world!");
+        System.out.println("hello world!!!!!");
 
         context.close();
     }
